@@ -1406,6 +1406,14 @@
 #define SERCOM_I2CM_STATUS_BUSSTATE_Pos       _UINT16_(4)                                          /* (SERCOM_I2CM_STATUS) Bus State Position */
 #define SERCOM_I2CM_STATUS_BUSSTATE_Msk       (_UINT16_(0x3) << SERCOM_I2CM_STATUS_BUSSTATE_Pos)   /* (SERCOM_I2CM_STATUS) Bus State Mask */
 #define SERCOM_I2CM_STATUS_BUSSTATE(value)    (SERCOM_I2CM_STATUS_BUSSTATE_Msk & (_UINT16_(value) << SERCOM_I2CM_STATUS_BUSSTATE_Pos)) /* Assignment of value for BUSSTATE in the SERCOM_I2CM_STATUS register */
+#define   SERCOM_I2CM_STATUS_BUSSTATE_UNKNOWN_Val _UINT16_(0x0)                                        /* (SERCOM_I2CM_STATUS) Wait for stop or idle  */
+#define   SERCOM_I2CM_STATUS_BUSSTATE_IDLE_Val _UINT16_(0x1)                                        /* (SERCOM_I2CM_STATUS) Wait for transaction initialization  */
+#define   SERCOM_I2CM_STATUS_BUSSTATE_OWNER_Val _UINT16_(0x2)                                        /* (SERCOM_I2CM_STATUS) I2C master is the current owner of the bus  */
+#define   SERCOM_I2CM_STATUS_BUSSTATE_BUSY_Val _UINT16_(0x3)                                        /* (SERCOM_I2CM_STATUS) Some other I2C master owns the bus  */
+#define SERCOM_I2CM_STATUS_BUSSTATE_UNKNOWN   (SERCOM_I2CM_STATUS_BUSSTATE_UNKNOWN_Val << SERCOM_I2CM_STATUS_BUSSTATE_Pos) /* (SERCOM_I2CM_STATUS) Wait for stop or idle Position */
+#define SERCOM_I2CM_STATUS_BUSSTATE_IDLE      (SERCOM_I2CM_STATUS_BUSSTATE_IDLE_Val << SERCOM_I2CM_STATUS_BUSSTATE_Pos) /* (SERCOM_I2CM_STATUS) Wait for transaction initialization Position */
+#define SERCOM_I2CM_STATUS_BUSSTATE_OWNER     (SERCOM_I2CM_STATUS_BUSSTATE_OWNER_Val << SERCOM_I2CM_STATUS_BUSSTATE_Pos) /* (SERCOM_I2CM_STATUS) I2C master is the current owner of the bus Position */
+#define SERCOM_I2CM_STATUS_BUSSTATE_BUSY      (SERCOM_I2CM_STATUS_BUSSTATE_BUSY_Val << SERCOM_I2CM_STATUS_BUSSTATE_Pos) /* (SERCOM_I2CM_STATUS) Some other I2C master owns the bus Position */
 #define SERCOM_I2CM_STATUS_LOWTOUT_Pos        _UINT16_(6)                                          /* (SERCOM_I2CM_STATUS) SCL Low Timeout Position */
 #define SERCOM_I2CM_STATUS_LOWTOUT_Msk        (_UINT16_(0x1) << SERCOM_I2CM_STATUS_LOWTOUT_Pos)    /* (SERCOM_I2CM_STATUS) SCL Low Timeout Mask */
 #define SERCOM_I2CM_STATUS_LOWTOUT(value)     (SERCOM_I2CM_STATUS_LOWTOUT_Msk & (_UINT16_(value) << SERCOM_I2CM_STATUS_LOWTOUT_Pos)) /* Assignment of value for LOWTOUT in the SERCOM_I2CM_STATUS register */
